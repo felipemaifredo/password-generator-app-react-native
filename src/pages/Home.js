@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar"
 import { StyleSheet, Text, View, Image, TouchableOpacity, Modal } from "react-native"
 import Slider from "@react-native-community/slider"
 import { useState } from "react"
-import { ModalComponent } from "./src/components/ModalComponent"
+import { ModalComponent } from "../components/ModalComponent"
 
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%&?"
 
@@ -24,7 +24,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Image 
-        source={require("./src/assets/logo.png")} 
+        source={require("../assets/logo.png")} 
 
       />
       <Text style={styles.textChar}>{`${size} Caracteres`}</Text>
