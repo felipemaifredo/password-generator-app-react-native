@@ -1,6 +1,8 @@
 import { Text, View, StyleSheet, TouchableOpacity, Clipboard  } from "react-native"
+import useStorage from "../hooks/useStorage"
 
 export function ModalComponent({ setModalVisible, passwordGenerate }) {
+    const { saveItem } = useStorage()
 
     function closeModal() {
         setModalVisible(false)
@@ -8,11 +10,12 @@ export function ModalComponent({ setModalVisible, passwordGenerate }) {
 
     function copyToClipboard() {
         Clipboard.setString(passwordGenerate);
-        alert('Texto copiado para a área de transferência!');
+        setModalVisible(false)
     }
 
-    function savePassword() {
-        alert("Ainda não estamos fazendo em isso, mas novidades em breve")
+    async function savePassword() {
+        await saveItem("@pass", passwordGenerate)
+        setModalVisible(false)
     }
 
     return (

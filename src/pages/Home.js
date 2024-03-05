@@ -6,7 +6,7 @@ import { ModalComponent } from "../components/ModalComponent"
 
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%&?"
 
-export default function App() {
+export function Home() {
   const [size, setSize] = useState(10)
   const [passwordGenerate, setpasswordGenerate] = useState("")
   const [ modalVisible, setModalVisible ] = useState(false)
