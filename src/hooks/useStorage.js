@@ -2,7 +2,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage"
 
 const useStorage = () => {
     const getItem = async (key) => {
-
         try {
             const passwords = await AsyncStorage.getItem(key)
             return JSON.parse(passwords) || []
@@ -32,7 +31,6 @@ const useStorage = () => {
             console.log(error)
         }
     }
-
 
     return {
         getItem,

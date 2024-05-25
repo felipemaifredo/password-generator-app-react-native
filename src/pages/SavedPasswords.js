@@ -16,9 +16,6 @@ export function SavedPasswords() {
         loadPasswords()
     }, [focused])
 
-
-
-
     return (
         <View>
             <Text>Senhas Salvas</Text>
